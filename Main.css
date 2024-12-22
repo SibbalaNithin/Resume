@@ -1,0 +1,276 @@
+.Home{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* top: 100px; */
+    margin-top: -300px;
+}
+.ProfilePic{
+    width: 300px;
+    height: 300px;
+    margin-top: 7%;
+}
+.ProfilePic img{
+    width: 100%;
+}
+.ProfileInfo{
+    border: 1px solid black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 7%;
+    border-radius: 10px;
+}
+@media(max-width: 768px) {
+    .ProfilePic{
+        position: absolute;
+        width: 100%;
+        top: 5%;
+    }
+    .ProfileInfo{
+        position: absolute;
+        top: 100%;
+        gap: 0.2rem;
+    }
+}
+
+.skill-list {
+    width: 90%;
+    margin: 0 auto;
+    top: 70%;
+    position: absolute;
+    left: 5%;
+}
+
+.skill-item {
+  margin: 10px 0;
+}
+
+.skill-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.progressbar {
+  height: 20px; /* Adjust height as needed */
+  background-color: #e0e0e0; /* Background color for the progress bar */
+  border-radius: 5px; /* Rounded corners */
+  overflow: hidden; /* Ensures the inner div doesn't overflow */
+}
+
+.progress {
+  height: 100%;
+  background-color: #76c7c0; /* Color for the filled portion */
+  transition: width 0.5s ease; /* Smooth transition for width change */
+  position: relative; /* Positioning context for the percentage */
+}
+
+.percentage {
+  position: absolute; /* Absolute positioning */
+  left: 50%; /* Center horizontally */
+  top: 50%; /* Center vertically */
+  transform: translate(-50%, -50%); /* Adjust for centering */
+  color: white; /* Text color */
+  font-weight: bold; /* Make the text bold */
+}
+
+
+.navbar{
+    background-color: black;
+    position: relative;
+    height: 3rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    color: white;
+}
+.navbar i{
+    display: none;
+}
+.logo{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.menu-list ul{
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    color: black;
+}
+
+.menu-list a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.menu-list a:hover{
+    text-decoration: solid underline 2px;
+}
+button{
+    padding: 2px 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light Mode button style */
+
+button{
+    background-color: lightblue;
+    color: grey;
+}
+
+/* Dark mode button styles */
+body.dark-mode button{
+    background-color: black;
+    color: white;
+}
+
+/* Dark mode navbar styles */
+body.dark-mode .navbar{
+    background-color: black;
+    color: white;
+} */
+body.dark-mode .menu-list a{
+    color: white;
+}
+
+/* dark mode body styles */
+
+body.dark-mode{
+    background-color: #333;
+    color: white;
+}
+
+/* Ensure default styles are for light mode */
+
+body{
+    background-color: white;
+    color: #333;  
+}
+body.dark-mode.contact-footer{
+    background-color: #222;
+} body.dark-mode.service-list{
+    background-color: #333;
+}
+body.dark-mode.service-item{
+    background-color: #222;
+}
+
+/* Footer styles */
+
+.contact-footer{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+    top: 170vh;
+    text-align: center;
+}
+.contact-block{
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+.contact-heading{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.contact-description,
+.contact-phone,
+.contact-email,
+.contact-address,
+.contact-follow,
+.business-hours{
+    margin: 5px 0;
+}
+.contact-link{
+    color: white;
+    text-decoration: none;
+}
+.contact-link:hover{
+    text-decoration: underline;
+}
+@media(max-width:768px){
+    .contact-footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-block{
+        width: 100px;
+        margin: 10px 0;
+    }
+    .menu-list ul{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: grey;
+        padding: 1rem;
+    }
+    .navbar i{
+        display: block;
+    }
+    .logo{
+        display: flex;
+        justify-content: center;
+    }
+    .contact-footer{
+        flex-direction: column;
+        align-items: center;
+        top: 90rem;
+    }
+    .contact-block{
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+.service-list {
+    position: absolute;
+    top: 110%;
+    background-color: #76c7c0;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-list-title {
+    text-align: flex-start;
+    margin-bottom: 20px;
+}
+
+.service-list-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+.service-item {
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.service-item-title {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.service-item-description {
+    margin: 5px 0 0;
+}
